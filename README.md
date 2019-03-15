@@ -63,9 +63,9 @@ For detailed help on any command, run `inspec_tools help [COMMAND]`. Help can al
 
 ## compliance
 
-  compliance parses an inspec results json to check if the compliance level meets a specified threshold.
+`compliance` parses an inspec results json to check if the compliance level meets a specified threshold.
 
-  If the specified threshold is not met, an error code (1) is returned along with non-compliant elements.
+If the specified threshold is not met, an error code (1) is returned along with non-compliant elements.
 
 ```
 USAGE:  inspec_tools compliance [OPTIONS] -j <inspec-json> -i <threshold-inline>
@@ -108,7 +108,7 @@ failed.high.max: 1
 
 ## summary
 
-  summary parses an inspec results json to create a summary json
+  `summary` parses an inspec results json to create a summary json
   
 ```
 USAGE: inspec_tools summary [OPTIONS] -j <inspec-json> -o <summary-csv>
@@ -142,7 +142,7 @@ example: inspec_tools xccdf2inspec -x xccdf_file.xml -a attributes.yml -o myprof
 
 ## inspec2xccdf
 
-inspec2xccdf converts an InSpec profile in json format to a STIG XCCDF Document
+`inspec2xccdf` converts an InSpec profile in json format to a STIG XCCDF Document
 ```
 USAGE: inspec_tools inspec2xccdf [OPTIONS] -j <inspec-json> -a <xccdf-attr-yml> -o <xccdf-xml>
 
@@ -157,7 +157,7 @@ example: inspec_tools inspec2xccdf -j example.json -a attributes.yml -o xccdf.xm
 
 ## csv2inspec
 
-Convert a csv export of STIG controls to an InSpec profile
+`csv2inspec` converts a csv security control spreadsheet of STIG controls to an InSpec profile
 ```
 USAGE: inspec_tools csv2inspec [OPTIONS] -c <stig-csv> -m <map-yml>
 
@@ -174,14 +174,14 @@ example: inspec_tools csv2inspec -c stig.csv -m map.yml -o mydir -f ruby -s true
 
 ### generate_map
 
-This command will generate a `mapping.xml` file that can be passed in to the `csv2inspec` command with the `--m` option.
+The `generate_map` sub-command will generate a `mapping.xml` file that can be passed in to the `csv2inspec` command with the `--m` option.
 ```
 USAGE: inspec_tools generate_map
 ```
 
 ## inspec2csv
 
-Convert an InSpec json to a csv file
+`inspec2csv` will onvert an InSpec json to a csv file
 ```
 USAGE: inspec_tools inspec2csv [OPTIONS] -j <inspec-json> -o <profile-csv>
 
@@ -195,7 +195,7 @@ example: inspec_tools inspec2csv -j inspec_profile.json -o mycsv.csv
 
 ## inspec2ckl
 
-inspec2ckl translates an InSpec results json into Stig Checklist
+`inspec2ckl` translates an InSpec results json into Stig Checklist
 
 ```
 USAGE: inspec_tools inspec2ckl [OPTIONS] -j <inspec-json> -o <results-ckl>
@@ -210,7 +210,7 @@ example: inspec_tools inspec2ckl -j results.json -o output.ckl
 
 ## pdf2inspec
 
-pdf2inspec translates a pdf containing a CIS benchmark into an InSpec profile.
+`pdf2inspec` translates a pdf containing a CIS benchmark into an InSpec profile.
 
 ```
 USAGE: inspec_tools pdf2inspec [OPTIONS] -p <cis-benchmark>
