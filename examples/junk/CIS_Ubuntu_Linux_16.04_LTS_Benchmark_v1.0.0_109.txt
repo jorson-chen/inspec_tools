@@ -1,0 +1,23 @@
+2.2.8 Ensure DNS Server is not enabled (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The Domain Name System (DNS) is a hierarchical naming system that maps names to IP
+addresses for computers, services and other resources connected to a network.
+Rationale:
+Unless a system is specifically designated to act as a DNS server, it is recommended that the
+package be deleted to reduce the potential attack surface.
+Audit:
+Run one of the following commands to verify named is not enabled:
+# systemctl is-enabled bind9
+disabled
+
+Verify result is not "enabled".
+Remediation:
+Run the following command to disable named:
+# systemctl disable bind9
+
+108 | P a g e
+
+

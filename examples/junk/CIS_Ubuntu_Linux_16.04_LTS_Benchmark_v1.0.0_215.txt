@@ -1,0 +1,21 @@
+# stat /etc/ssh/sshd_config
+Access: (0600/-rw-------) Uid: (
+
+0/
+
+root)
+
+Gid: (
+
+0/
+
+root)
+
+Remediation:
+Run the following commands to set ownership and permissions on /etc/ssh/sshd_config:
+# chown root:root /etc/ssh/sshd_config
+# chmod og-rwx /etc/ssh/sshd_config
+
+214 | P a g e
+
+

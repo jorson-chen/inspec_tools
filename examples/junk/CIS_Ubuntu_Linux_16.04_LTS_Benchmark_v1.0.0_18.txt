@@ -1,0 +1,12 @@
+# modprobe -n -v cramfs
+install /bin/true
+# lsmod | grep cramfs
+<No output>
+
+Remediation:
+Edit or create the file /etc/modprobe.d/CIS.conf and add the following line:
+install cramfs /bin/true
+
+17 | P a g e
+
+

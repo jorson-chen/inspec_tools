@@ -1,0 +1,31 @@
+1.1.5 Ensure separate partition exists for /var (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+The /var directory is used by daemons and other system services to temporarily store
+dynamic data. Some directories created by these processes may be world-writable.
+Rationale:
+Since the /var directory may contain world-writable files and directories, there is a risk of
+resource exhaustion if it is not bound to a separate partition.
+Audit:
+Run the following command and verify output shows /var is mounted:
+# mount | grep /var
+/dev/xvdg1 on /var type ext4 (rw,relatime,data=ordered)
+
+Remediation:
+For new installations, during installation create a custom partition setup and specify a
+separate partition for /var.
+For systems that were previously installed, create a new partition and
+configure /etc/fstab as appropriate.
+Impact:
+Resizing filesystems is a common activity in cloud-hosted servers. Separate filesystem
+partitions may prevent successful resizing, or may require the installation of additional
+tools solely for the purpose of resizing operations. The use of these additional tools may
+introduce their own security considerations.
+References:
+1. AJ Lewis, "LVM HOWTO", http://tldp.org/HOWTO/LVM-HOWTO/
+
+29 | P a g e
+
+

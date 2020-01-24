@@ -1,0 +1,11 @@
+Making global modifications to users' files without alerting the user community can result
+in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
+policy be established to report user .netrc file permissions and determine the action to be
+taken in accordance with site policy.
+Notes:
+While the complete removal of .netrc files is recommended if any are required on the
+system secure permissions must be applied.
+
+280 | P a g e
+
+

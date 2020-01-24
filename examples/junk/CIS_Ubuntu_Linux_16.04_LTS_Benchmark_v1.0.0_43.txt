@@ -1,0 +1,23 @@
+1.1.18 Ensure nosuid option set on removable media partitions (Not
+Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The nosuid mount option specifies that the filesystem cannot contain setuid files.
+Rationale:
+Setting this option on a file system prevents users from introducing privileged programs
+onto the system and allowing non-root users to execute them.
+Audit:
+Run the following command and verify that the nosuid option is set on all removable media
+partitions.
+# mount
+
+Remediation:
+Edit the /etc/fstab file and add nosuid to the fourth field (mounting options) of all
+removable media partitions. Look for entries that have mount points that contain words
+such as floppy or cdrom. See the fstab(5) manual page for more information.
+
+42 | P a g e
+
+

@@ -1,0 +1,22 @@
+AppArmor must be enabled at boot time in your bootloader configuration to ensure that
+the controls it provides are not overridden.
+Audit:
+Run the following command and verify that no linux line the apparmor=0 parameter set:
+# grep "^\s*linux" /boot/grub/grub.cfg
+
+Remediation:
+Edit /etc/default/grub and remove all instances of apparmor=0 from all CMDLINE_LINUX
+parameters:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+GRUB_CMDLINE_LINUX=""
+
+Run the following command to update the grub2 configuration:
+# update-grub
+
+Notes:
+This recommendation is designed around the grub bootloader, if LILO or another
+bootloader is in use in your environment enact equivalent settings.
+
+70 | P a g e
+
+

@@ -1,0 +1,31 @@
+3.1 Network Parameters (Host Only)
+The following network parameters are intended for use if the system is to act as a host
+only. A system is considered host only if the system has a single interface, or has multiple
+interfaces but will not be configured as a router.
+
+3.1.1 Ensure IP forwarding is disabled (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The net.ipv4.ip_forward flag is used to tell the system whether it can forward packets or
+not.
+Rationale:
+Setting the flag to 0 ensures that a system with multiple interfaces (for example, a hard
+proxy), will never be able to forward packets, and therefore, never serve as a router.
+Audit:
+Run the following command and verify output matches:
+# sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
+
+Remediation:
+Set the following parameter in the /etc/sysctl.conf file:
+net.ipv4.ip_forward = 0
+
+Run the following commands to set the active kernel parameters:
+# sysctl -w net.ipv4.ip_forward=0
+# sysctl -w net.ipv4.route.flush=1
+
+125 | P a g e
+
+

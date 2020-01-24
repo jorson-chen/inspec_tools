@@ -1,0 +1,25 @@
+Remediation:
+For 32 bit systems add the following lines to the /etc/audit/audit.rules file:
+-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F
+exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access
+-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F
+exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+
+For 64 bit systems add the following lines to the /etc/audit/audit.rules file:
+-a always,exit -F arch=b64 -S creat -S open -S openat -S
+exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access
+-a always,exit -F arch=b32 -S creat -S open -S openat -S
+exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access
+-a always,exit -F arch=b64 -S creat -S open -S openat -S
+exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+-a always,exit -F arch=b32 -S creat -S open -S openat -S
+exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+
+truncate -S ftruncate -F
+truncate -S ftruncate -F
+truncate -S ftruncate -F
+truncate -S ftruncate -F
+
+175 | P a g e
+
+

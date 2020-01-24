@@ -1,0 +1,8 @@
+This recommendation is designed around the postfix mail server, depending on your
+environment you may have an alternative MTA installed such as sendmail. If this is the
+case consult the documentation for your installed MTA to configure the recommended
+state.
+
+116 | P a g e
+
+

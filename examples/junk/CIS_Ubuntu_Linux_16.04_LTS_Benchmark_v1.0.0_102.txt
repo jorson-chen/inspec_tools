@@ -1,0 +1,39 @@
+2.2.1.3 Ensure chrony is configured (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+chrony is a daemon which implements the Network Time Protocol (NTP) is designed to
+
+synchronize system clocks across a variety of systems and use a source that is highly
+accurate. More information on chrony can be found
+at http://chrony.tuxfamily.org/. chrony can be configured to be a client and/or a server.
+Rationale:
+If chrony is in use on the system proper configuration is vital to ensuring time
+synchronization is working properly.
+
+This recommendation only applies if chrony is in use on the system.
+Audit:
+Run the following command and verify remote server is configured properly:
+# grep "^server" /etc/chrony/chrony.conf
+server <remote-server>
+
+Multiple servers may be configured.
+Run the following command and verify the first field for the chronyd process is _chrony:
+# ps -ef | grep chronyd
+_chrony
+491
+1 0 20:32 ?
+
+00:00:00 /usr/sbin/chronyd
+
+Remediation:
+Add or edit server lines to /etc/chrony/chrony.conf as appropriate:
+server <remote-server>
+
+Configure chrony to run as the chrony user by configuring the appropriate startup script
+for your distribution. Startup scripts are typically stored in /etc/init.d or /etc/systemd.
+
+101 | P a g e
+
+

@@ -1,0 +1,33 @@
+2.2.5 Ensure DHCP Server is not enabled (Scored) .............................................................. 105
+2.2.6 Ensure LDAP server is not enabled (Scored) ............................................................... 106
+2.2.7 Ensure NFS and RPC are not enabled (Scored) ........................................................... 107
+2.2.8 Ensure DNS Server is not enabled (Scored) ................................................................. 108
+2.2.9 Ensure FTP Server is not enabled (Scored) .................................................................. 109
+2.2.10 Ensure HTTP server is not enabled (Scored) ............................................................ 110
+2.2.11 Ensure IMAP and POP3 server is not enabled (Scored)........................................ 111
+2.2.12 Ensure Samba is not enabled (Scored) ........................................................................ 112
+2.2.13 Ensure HTTP Proxy Server is not enabled (Scored) ............................................... 113
+2.2.14 Ensure SNMP Server is not enabled (Scored) ........................................................... 114
+2.2.15 Ensure mail transfer agent is configured for local-only mode (Scored)......... 115
+2.2.16 Ensure rsync service is not enabled (Scored) ........................................................... 117
+2.2.17 Ensure NIS Server is not enabled (Scored) ................................................................ 118
+2.3 Service Clients .................................................................................................................................. 119
+2.3.1 Ensure NIS Client is not installed (Scored) ................................................................... 119
+2.3.2 Ensure rsh client is not installed (Scored) .................................................................... 121
+2.3.3 Ensure talk client is not installed (Scored) ................................................................... 122
+2.3.4 Ensure telnet client is not installed (Scored) ............................................................... 123
+2.3.5 Ensure LDAP client is not installed (Scored) ............................................................... 124
+3 Network Configuration.......................................................................................................................... 124
+3.1 Network Parameters (Host Only) ............................................................................................. 125
+3.1.1 Ensure IP forwarding is disabled (Scored) ................................................................... 125
+3.1.2 Ensure packet redirect sending is disabled (Scored) ............................................... 126
+3.2 Network Parameters (Host and Router) ................................................................................ 127
+3.2.1 Ensure source routed packets are not accepted (Scored) ...................................... 127
+3.2.2 Ensure ICMP redirects are not accepted (Scored) ..................................................... 129
+3.2.3 Ensure secure ICMP redirects are not accepted (Scored) ...................................... 130
+3.2.4 Ensure suspicious packets are logged (Scored) .......................................................... 131
+3.2.5 Ensure broadcast ICMP requests are ignored (Scored) ........................................... 132
+3.2.6 Ensure bogus ICMP responses are ignored (Scored) ................................................ 133
+5|Page
+
+

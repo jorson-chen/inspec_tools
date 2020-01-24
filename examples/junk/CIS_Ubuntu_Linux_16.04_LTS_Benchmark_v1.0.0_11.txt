@@ -1,0 +1,31 @@
+6.1.13 Audit SUID executables (Not Scored) ........................................................................... 264
+6.1.14 Audit SGID executables (Not Scored) ........................................................................... 265
+6.2 User and Group Settings ............................................................................................................... 266
+6.2.1 Ensure password fields are not empty (Scored) ........................................................ 266
+6.2.2 Ensure no legacy "+" entries exist in /etc/passwd (Scored) ................................. 267
+6.2.3 Ensure no legacy "+" entries exist in /etc/shadow (Scored) ................................. 268
+6.2.4 Ensure no legacy "+" entries exist in /etc/group (Scored) .................................... 269
+6.2.5 Ensure root is the only UID 0 account (Scored) .......................................................... 270
+6.2.6 Ensure root PATH Integrity (Scored) ............................................................................. 271
+6.2.7 Ensure all users' home directories exist (Scored) ..................................................... 273
+6.2.8 Ensure users' home directories permissions are 750 or more restrictive
+(Scored) ................................................................................................................................................. 274
+6.2.9 Ensure users own their home directories (Scored) .................................................. 275
+6.2.10 Ensure users' dot files are not group or world writable (Scored) .................... 276
+6.2.11 Ensure no users have .forward files (Scored) ........................................................... 277
+6.2.12 Ensure no users have .netrc files (Scored) ................................................................. 278
+6.2.13 Ensure users' .netrc Files are not group or world accessible (Scored) ........... 279
+6.2.14 Ensure no users have .rhosts files (Scored) ............................................................... 281
+6.2.15 Ensure all groups in /etc/passwd exist in /etc/group (Scored) ....................... 282
+6.2.16 Ensure no duplicate UIDs exist (Scored) .................................................................... 283
+6.2.17 Ensure no duplicate GIDs exist (Scored)..................................................................... 284
+6.2.18 Ensure no duplicate user names exist (Scored) ....................................................... 285
+6.2.19 Ensure no duplicate group names exist (Scored) .................................................... 286
+6.2.20 Ensure shadow group is empty (Scored) .................................................................... 287
+Appendix: Summary Table ........................................................................................................................... 288
+Appendix: Change History ............................................................................................................................ 296
+
+Overview
+10 | P a g e
+
+

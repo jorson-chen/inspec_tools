@@ -1,0 +1,13 @@
+Remediation:
+Set the following parameters in the /etc/sysctl.conf file:
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0
+
+Run the following commands to set the active kernel parameters:
+# sysctl -w net.ipv4.conf.all.accept_source_route=0
+# sysctl -w net.ipv4.conf.default.accept_source_route=0
+# sysctl -w net.ipv4.route.flush=1
+
+128 | P a g e
+
+

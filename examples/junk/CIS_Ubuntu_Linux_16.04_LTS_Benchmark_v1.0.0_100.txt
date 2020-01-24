@@ -1,0 +1,38 @@
+2.2.1.2 Ensure ntp is configured (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+ntp is a daemon which implements the Network Time Protocol (NTP).
+
+It is designed to
+synchronize system clocks across a variety of systems and use a source that is highly
+accurate. More information on NTP can be found at http://www.ntp.org. ntp can be
+configured to be a client and/or a server.
+
+This recommendation only applies if ntp is in use on the system.
+Rationale:
+If ntp is in use on the system proper configuration is vital to ensuring time synchronization
+is working properly.
+Audit:
+Run the following command and verify output matches:
+# grep "^restrict" /etc/ntp.conf
+restrict -4 default kod nomodify notrap nopeer noquery
+restrict -6 default kod nomodify notrap nopeer noquery
+
+The -4 in the first line is optional and options after default can appear in any
+order. Additional restriction lines may exist.
+Run the following command and verify remote server is configured properly:
+# grep "^server" /etc/ntp.conf
+server <remote-server>
+
+Multiple servers may be configured.
+Verify that ntp is configured to run as the ntp user by running the following command:
+# grep "RUNASUSER=ntp" /etc/init.d/ntp
+RUNASUSER=ntp
+
+Remediation:
+
+99 | P a g e
+
+

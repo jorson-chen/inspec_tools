@@ -1,0 +1,25 @@
+1.6.1.2 Ensure the SELinux state is enforcing (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Set SELinux to enable when the system is booted.
+Rationale:
+SELinux must be enabled at boot time in to ensure that the controls it provides are in effect
+at all times.
+Audit:
+Run the following commands and ensure output matches:
+# grep SELINUX=enforcing /etc/selinux/config
+SELINUX=enforcing
+# sestatus
+SELinux status: enabled
+Current mode: enforcing
+Mode from config file: enforcing
+
+Remediation:
+Edit the /etc/selinux/config file to set the SELINUX parameter:
+SELINUX=enforcing
+
+66 | P a g e
+
+

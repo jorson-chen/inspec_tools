@@ -1,0 +1,45 @@
+1.6.2.2 Ensure all AppArmor Profiles are enforcing (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+AppArmor profiles define what resources applications are able to access.
+Rationale:
+Security configuration requirements vary from site to site. Some sites may mandate a
+policy that is stricter than the default policy, which is perfectly acceptable. This item is
+intended to ensure that any policies that exist on the system are activated.
+Audit:
+Run the following command and verify that profiles are loaded, no profiles are in complain
+mode, and no processes are unconfined:
+# apparmor_status
+apparmor module is loaded.
+17 profiles are loaded.
+17 profiles are in enforce mode.
+/bin/ping
+/sbin/klogd
+/sbin/syslog-ng
+/sbin/syslogd
+/usr/lib/PolicyKit/polkit-explicit-grant-helper
+/usr/lib/PolicyKit/polkit-grant-helper
+/usr/lib/PolicyKit/polkit-grant-helper-pam
+/usr/lib/PolicyKit/polkit-read-auth-helper
+/usr/lib/PolicyKit/polkit-resolve-exe-helper
+/usr/lib/PolicyKit/polkit-revoke-helper
+/usr/lib/PolicyKit/polkitd
+/usr/sbin/avahi-daemon
+/usr/sbin/identd
+/usr/sbin/mdnsd
+/usr/sbin/nscd
+/usr/sbin/ntpd
+/usr/sbin/traceroute
+0 profiles are in complain mode.
+1 processes have profiles defined.
+1 processes are in enforce mode :
+/usr/sbin/nscd (3979)
+0 processes are in complain mode.
+0 processes are unconfined but have a profile defined.
+
+Remediation:
+71 | P a g e
+
+

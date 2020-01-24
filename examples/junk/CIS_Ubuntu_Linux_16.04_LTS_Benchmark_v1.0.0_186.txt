@@ -1,0 +1,25 @@
+For 32 bit systems add the following lines to the /etc/audit/audit.rules file:
+-w
+-w
+-w
+-a
+
+/sbin/insmod -p x -k modules
+/sbin/rmmod -p x -k modules
+/sbin/modprobe -p x -k modules
+always,exit arch=b32 -S init_module -S delete_module -k modules
+
+For 64 bit systems add the following lines to the /etc/audit/audit.rules file:
+-w
+-w
+-w
+-a
+
+/sbin/insmod -p x -k modules
+/sbin/rmmod -p x -k modules
+/sbin/modprobe -p x -k modules
+always,exit arch=b64 -S init_module -S delete_module -k modules
+
+185 | P a g e
+
+

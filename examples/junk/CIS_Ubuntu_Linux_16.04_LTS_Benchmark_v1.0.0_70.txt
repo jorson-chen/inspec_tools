@@ -1,0 +1,35 @@
+1.6.2 Configure AppArmor
+AppArmor provides a Mandatory Access Control (MAC) system that greatly augments the
+default Discretionary Access Control (DAC) model. Under AppArmor MAC rules are applied
+by file paths instead of by security contexts as in other MAC systems. As such it does not
+require support in the filesystem and can be applied to network mounted filesystems for
+example. AppArmor security policies define what system resources applications can access
+and what privileges they can do so with. This automatically limits the damage that the
+software can do to files accessible by the calling user. The user does not need to take any
+action to gain this benefit. For an action to occur, both the traditional DAC permissions
+must be satisfied as well as the AppArmor MAC rules. The action will not be allowed if
+either one of these models does not permit the action. In this way, AppArmor rules can only
+make a system's permissions more restrictive and secure.
+Note: This section only applies if AppArmor is in use on the system. Recommendations for
+SELinux are also included, and additional Mandatory Access Control systems exist beyond
+these two.
+References:
+1. AppArmor Documentation: http://wiki.apparmor.net/index.php/Documentation
+2. Ubuntu AppArmor
+Documentation: https://help.ubuntu.com/community/AppArmor
+3. SUSE AppArmor
+Documentation: https://www.suse.com/documentation/apparmor/
+
+1.6.2.1 Ensure AppArmor is not disabled in bootloader configuration
+(Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Configure AppArmor to be enabled at boot time and verify that it has not been overwritten
+by the bootloader boot parameters.
+Rationale:
+
+69 | P a g e
+
+

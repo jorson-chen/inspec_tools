@@ -1,0 +1,12 @@
+# cat /etc/motd
+
+Run the following command and verify no results are returned:
+# egrep '(\\v|\\r|\\m|\\s)' /etc/motd
+
+Remediation:
+Edit the /etc/motd file with the appropriate contents according to your site policy, remove
+any instances of \m, \r, \s, or \v.
+
+76 | P a g e
+
+

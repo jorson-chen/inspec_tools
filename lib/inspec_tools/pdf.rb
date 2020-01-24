@@ -55,6 +55,22 @@ module InspecTools
 
     private
 
+    def find_nist(cis_array)
+      mapping_array = []
+      cis_array.each do |cis|
+        @nist_mapping.each do |nist|
+          if nist[:cis] == cis
+            mapping_array.push([nist[:nist], nist[:nist_ver]])
+          end
+        end
+      end
+      if mapping_array == []
+        return 'Not Mapped'
+      end
+
+      mapping_array
+    end
+
     # converts passed in data into InSpec format
     def parse_controls
       controls = []
@@ -72,7 +88,9 @@ module InspecTools
         control['tags']['cis_control'] = [contr[:cis], @nist_mapping[0][:cis_ver]] unless contr[:cis].nil? # tag cis_control: [5, 6.1] ##6.1 is the version
         control['tags']['cis_level'] = contr[:level] unless contr[:level].nil?
         control['tags']['nist'] = nist unless nist.nil? # tag nist: [AC-3, 4]  ##4 is the version
+        # TODO: change this to a sub-description
         control['tags']['check'] = contr[:check] unless contr[:check].nil?
+        # TODO: chnge this to a sub-description
         control['tags']['fix'] = contr[:fix] unless contr[:fix].nil?
         control['tags']['Default Value'] = contr[:default] unless contr[:default].nil?
         controls << control

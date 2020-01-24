@@ -1,0 +1,21 @@
+Audit:
+Run the following commands and verify that output matches for at least one:
+# grep "^AllowUsers" /etc/ssh/sshd_config
+AllowUsers <userlist>
+# grep "^AllowGroups" /etc/ssh/sshd_config
+AllowGroups <grouplist>
+# grep "^DenyUsers" /etc/ssh/sshd_config
+DenyUsers <userlist>
+# grep "^DenyGroups" /etc/ssh/sshd_config
+DenyGroups <grouplist>
+
+Remediation:
+Edit the /etc/ssh/sshd_config file to set one or more of the parameter as follows:
+AllowUsers <userlist>
+AllowGroups <grouplist>
+DenyUsers <userlist>
+DenyGroups <grouplist>
+
+230 | P a g e
+
+

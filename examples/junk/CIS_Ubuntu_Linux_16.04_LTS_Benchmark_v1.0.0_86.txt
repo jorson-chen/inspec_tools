@@ -1,0 +1,11 @@
+Run the following command to update the system databases:
+# dconf update
+
+Notes:
+Additional options and sections may appear in the /etc/dconf/db/gdm.d/01-bannermessage file.
+If a different GUI login service is in use, consult your documentation and apply an
+equivalent banner.
+
+85 | P a g e
+
+

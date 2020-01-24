@@ -1,0 +1,29 @@
+4.2.2 Configure syslog-ng
+The syslog-ng software is recommended as a replacement for the syslogd daemon and
+provides improvements over syslogd, such as connection-oriented (i.e. TCP) transmission
+of logs, the option to log to database formats, and the encryption of log data en route to a
+central logging server.
+Note: This section only applies if syslog-ng is installed on the system.
+
+4.2.2.1 Ensure syslog-ng service is enabled (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+Once the syslog-ng package is installed it needs to be activated.
+Rationale:
+If the syslog-ng service is not activated the system may default to the syslogd service or
+lack logging instead.
+Audit:
+Run the following command to verify syslog-ng is enabled:
+# systemctl is-enabled syslog-ng
+enabled
+
+Verify result is "enabled".
+Remediation:
+Run the following command to enable syslog-ng:
+# update-rc.d syslog-ng enable
+
+194 | P a g e
+
+

@@ -1,0 +1,180 @@
+5.4.1.1
+5.4.1.2
+5.4.1.3
+5.4.1.4
+5.4.2
+5.4.3
+5.4.4
+5.5
+5.6
+6
+6.1
+6.1.1
+6.1.2
+6.1.3
+6.1.4
+6.1.5
+6.1.6
+6.1.7
+6.1.8
+6.1.9
+6.1.10
+6.1.11
+6.1.12
+6.1.13
+6.1.14
+6.2
+6.2.1
+6.2.2
+6.2.3
+6.2.4
+6.2.5
+6.2.6
+6.2.7
+6.2.8
+6.2.9
+6.2.10
+6.2.11
+6.2.12
+
+Ensure password expiration is 90 days or less (Scored)
+Ensure minimum days between password changes is 7 or
+more (Scored)
+Ensure password expiration warning days is 7 or more
+(Scored)
+Ensure inactive password lock is 30 days or less (Scored)
+Ensure system accounts are non-login (Scored)
+Ensure default group for the root account is GID 0 (Scored)
+Ensure default user umask is 027 or more restrictive (Scored)
+Ensure root login is restricted to system console (Not Scored)
+Ensure access to the su command is restricted (Scored)
+System Maintenance
+System File Permissions
+Audit system file permissions (Not Scored)
+Ensure permissions on /etc/passwd are configured (Scored)
+Ensure permissions on /etc/shadow are configured (Scored)
+Ensure permissions on /etc/group are configured (Scored)
+Ensure permissions on /etc/gshadow are configured (Scored)
+Ensure permissions on /etc/passwd- are configured (Scored)
+Ensure permissions on /etc/shadow- are configured (Scored)
+Ensure permissions on /etc/group- are configured (Scored)
+Ensure permissions on /etc/gshadow- are configured
+(Scored)
+Ensure no world writable files exist (Scored)
+Ensure no unowned files or directories exist (Scored)
+Ensure no ungrouped files or directories exist (Scored)
+Audit SUID executables (Not Scored)
+Audit SGID executables (Not Scored)
+User and Group Settings
+Ensure password fields are not empty (Scored)
+Ensure no legacy "+" entries exist in /etc/passwd (Scored)
+Ensure no legacy "+" entries exist in /etc/shadow (Scored)
+Ensure no legacy "+" entries exist in /etc/group (Scored)
+Ensure root is the only UID 0 account (Scored)
+Ensure root PATH Integrity (Scored)
+Ensure all users' home directories exist (Scored)
+Ensure users' home directories permissions are 750 or more
+restrictive (Scored)
+Ensure users own their home directories (Scored)
+Ensure users' dot files are not group or world writable
+(Scored)
+Ensure no users have .forward files (Scored)
+Ensure no users have .netrc files (Scored)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+294 | P a g e
+
+

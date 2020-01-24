@@ -1,0 +1,63 @@
+3.6 Firewall Configuration
+IPtables is an application that allows a system administrator to configure the IPv4 tables,
+chains and rules provided by the Linux kernel firewall. While several methods of
+configuration exist this section is intended only to ensure the resulting IPtables rules are in
+place, not how they are configured. If IPv6 is in use in your environment, similar settings
+should be applied to the IP6tables as well.
+
+Note: This section broadly assumes starting with an empty IPtables firewall ruleset
+(established by flushing the rules with iptables -F). Remediation steps included only
+affect the live system, you will also need to configure your default firewall configuration to
+apply on boot. Configuration of a live systems firewall directly over a remote connection
+will often result in being locked out. It is advised to have a known good firewall
+configuration set to run on boot and to configure an entire firewall structure in a script that
+is then run and tested before saving to boot. The following script will implement the
+firewall rules of this section and open port 22(ssh) from anywhere:
+#!/bin/bash
+# Flush IPtables rules
+iptables -F
+# Ensure
+iptables
+iptables
+iptables
+
+default deny firewall policy
+-P INPUT DROP
+-P OUTPUT DROP
+-P FORWARD DROP
+
+# Ensure
+iptables
+iptables
+iptables
+
+loopback traffic is configured
+-A INPUT -i lo -j ACCEPT
+-A OUTPUT -o lo -j ACCEPT
+-A INPUT -s 127.0.0.0/8 -j DROP
+
+# Ensure
+iptables
+iptables
+iptables
+iptables
+iptables
+iptables
+
+outbound and established connections are configured
+-A OUTPUT -p tcp -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -p udp -m state --state NEW,ESTABLISHED -j ACCEPT
+-A OUTPUT -p icmp -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -p udp -m state --state ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -m state --state ESTABLISHED -j ACCEPT
+
+# Open inbound ssh(tcp port 22) connections
+iptables -A INPUT -p tcp --dport 22 -m state --state NEW -j ACCEPT
+
+Ubuntu is distributed with the UFW service which acts as a front end to iptables. The
+default configuration of UFW implements a configuration very similar to that
+recommended here. IPTables configuration allows for far more complex implementations
+148 | P a g e
+
+

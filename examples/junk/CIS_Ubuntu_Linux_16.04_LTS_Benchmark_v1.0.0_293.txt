@@ -1,0 +1,167 @@
+4.1.4
+4.1.5
+4.1.6
+4.1.7
+4.1.8
+4.1.9
+4.1.10
+4.1.11
+4.1.12
+4.1.13
+4.1.14
+4.1.15
+4.1.16
+4.1.17
+4.1.18
+4.2
+4.2.1
+4.2.1.1
+4.2.1.2
+4.2.1.3
+4.2.1.4
+4.2.1.5
+4.2.2
+4.2.2.1
+4.2.2.2
+4.2.2.3
+4.2.2.4
+4.2.2.5
+4.2.3
+
+enabled (Scored)
+Ensure events that modify date and time information are
+collected (Scored)
+Ensure events that modify user/group information are
+collected (Scored)
+Ensure events that modify the system's network environment
+are collected (Scored)
+Ensure events that modify the system's Mandatory Access
+Controls are collected (Scored)
+Ensure login and logout events are collected (Scored)
+Ensure session initiation information is collected (Scored)
+Ensure discretionary access control permission modification
+events are collected (Scored)
+Ensure unsuccessful unauthorized file access attempts are
+collected (Scored)
+Ensure use of privileged commands is collected (Scored)
+Ensure successful file system mounts are collected (Scored)
+Ensure file deletion events by users are collected (Scored)
+Ensure changes to system administration scope (sudoers) is
+collected (Scored)
+Ensure system administrator actions (sudolog) are collected
+(Scored)
+Ensure kernel module loading and unloading is collected
+(Scored)
+Ensure the audit configuration is immutable (Scored)
+Configure Logging
+Configure rsyslog
+Ensure rsyslog Service is enabled (Scored)
+Ensure logging is configured (Not Scored)
+Ensure rsyslog default file permissions configured (Scored)
+Ensure rsyslog is configured to send logs to a remote log host
+(Scored)
+Ensure remote rsyslog messages are only accepted on
+designated log hosts. (Not Scored)
+Configure syslog-ng
+Ensure syslog-ng service is enabled (Scored)
+Ensure logging is configured (Not Scored)
+Ensure syslog-ng default file permissions configured (Scored)
+Ensure syslog-ng is configured to send logs to a remote log
+host (Scored)
+Ensure remote syslog-ng messages are only accepted on
+designated log hosts (Not Scored)
+Ensure rsyslog or syslog-ng is installed (Scored)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+292 | P a g e
+
+

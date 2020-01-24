@@ -1,0 +1,38 @@
+5.4.1 Set Shadow Password Suite Parameters
+While a majority of the password control parameters have been moved to PAM, some
+parameters are still available through the shadow password suite. Any changes made to
+/etc/login.defs will only be applied if the usermod command is used. If user IDs are
+added a different way, use the chage command to effect changes to individual user IDs.
+
+5.4.1.1 Ensure password expiration is 90 days or less (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The PASS_MAX_DAYS parameter in /etc/login.defs allows an administrator to force
+passwords to expire once they reach a defined age. It is recommended that the
+PASS_MAX_DAYS parameter be set to less than or equal to 90 days.
+Rationale:
+The window of opportunity for an attacker to leverage compromised credentials or
+successfully compromise credentials via an online brute force attack is limited by the age of
+the password. Therefore, reducing the maximum age of a password also reduces an
+attacker's window of opportunity.
+Audit:
+Run the following command and verify PASS_MAX_DAYS is 90 or less:
+# grep PASS_MAX_DAYS /etc/login.defs
+PASS_MAX_DAYS 90
+
+Verify all users with a password have their maximum days between password change set
+to 90 or less:
+# egrep ^[^:]+:[^\!*] /etc/shadow | cut -d: -f1
+<list of users>
+# chage --list <user>
+Maximum number of days between password change
+
+: 90
+
+Remediation:
+Set the PASS_MAX_DAYS parameter to 90 in /etc/login.defs:
+238 | P a g e
+
+

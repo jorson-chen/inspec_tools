@@ -1,0 +1,32 @@
+1.2 Configure Software Updates
+Ubuntu Linux uses apt to install and update software packages. Patch management
+procedures may vary widely between enterprises. Large enterprises may choose to install a
+local updates server that can be used in place of Ubuntu's servers, whereas a single
+deployment of a system may prefer to get updates directly. Updates can be performed
+automatically or manually, depending on the site's policy for patch management. Many
+large enterprises prefer to test patches on a non-production system before rolling out to
+production.
+For the purpose of this benchmark, the requirement is to ensure that a patch management
+system is configured and maintained. The specifics on patch update procedures are left to
+the organization.
+
+1.2.1 Ensure package manager repositories are configured (Not Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+Systems need to have package manager repositories configured to ensure they receive the
+latest patches and updates.
+Rationale:
+If a system's package repositories are misconfigured important patches may not be
+identified or a rogue repository could introduce compromised software.
+Audit:
+Run the following command and verify package repositories are configured correctly:
+# apt-cache policy
+
+Remediation:
+Configure your package manager repositories according to site policy.
+
+47 | P a g e
+
+

@@ -1,0 +1,46 @@
+On a 64 bit system run the following command and verify the output matches:
+# grep system-locale /etc/audit/audit.rules
+-a always,exit -F arch=b64 -S sethostname -S setdomainname -k system-locale
+-a always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale
+-w /etc/issue -p wa -k system-locale
+-w /etc/issue.net -p wa -k system-locale
+-w /etc/hosts -p wa -k system-locale
+-w /etc/network -p wa -k system-locale
+-w /etc/networks -p wa -k system-locale
+
+Remediation:
+For 32 bit systems add the following lines to the /etc/audit/audit.rules file:
+-a
+-w
+-w
+-w
+-w
+-w
+
+always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale
+/etc/issue -p wa -k system-locale
+/etc/issue.net -p wa -k system-locale
+/etc/hosts -p wa -k system-locale
+/etc/network -p wa -k system-locale
+/etc/networks -p wa -k system-locale
+
+For 64 bit systems add the following lines to the /etc/audit/audit.rules file:
+-a
+-a
+-w
+-w
+-w
+-w
+-w
+
+always,exit -F arch=b64 -S sethostname -S setdomainname -k system-locale
+always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale
+/etc/issue -p wa -k system-locale
+/etc/issue.net -p wa -k system-locale
+/etc/hosts -p wa -k system-locale
+/etc/network -p wa -k system-locale
+/etc/networks -p wa -k system-locale
+
+168 | P a g e
+
+

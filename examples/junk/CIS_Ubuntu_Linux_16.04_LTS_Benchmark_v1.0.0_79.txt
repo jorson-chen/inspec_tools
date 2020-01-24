@@ -1,0 +1,11 @@
+# egrep '(\\v|\\r|\\m|\\s)' /etc/issue
+
+Remediation:
+Edit the /etc/issue file with the appropriate contents according to your site policy,
+remove any instances of \m, \r, \s, or \v:
+# echo "Authorized uses only. All activity may be monitored and reported." >
+/etc/issue
+
+78 | P a g e
+
+

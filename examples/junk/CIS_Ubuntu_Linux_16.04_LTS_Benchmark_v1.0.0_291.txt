@@ -1,0 +1,172 @@
+2
+2.1
+2.1.1
+2.1.2
+2.1.3
+2.1.4
+2.1.5
+2.1.6
+2.1.7
+2.1.8
+2.1.9
+2.1.10
+2.2
+2.2.1
+2.2.1.1
+2.2.1.2
+2.2.1.3
+2.2.2
+2.2.3
+2.2.4
+2.2.5
+2.2.6
+2.2.7
+2.2.8
+2.2.9
+2.2.10
+2.2.11
+2.2.12
+2.2.13
+2.2.14
+2.2.15
+2.2.16
+2.2.17
+2.3
+2.3.1
+2.3.2
+2.3.3
+2.3.4
+2.3.5
+3
+3.1
+3.1.1
+
+Services
+inetd Services
+Ensure chargen services are not enabled (Scored)
+Ensure daytime services are not enabled (Scored)
+Ensure discard services are not enabled (Scored)
+Ensure echo services are not enabled (Scored)
+Ensure time services are not enabled (Scored)
+Ensure rsh server is not enabled (Scored)
+Ensure talk server is not enabled (Scored)
+Ensure telnet server is not enabled (Scored)
+Ensure tftp server is not enabled (Scored)
+Ensure xinetd is not enabled (Scored)
+Special Purpose Services
+Time Synchronization
+Ensure time synchronization is in use (Not Scored)
+Ensure ntp is configured (Scored)
+Ensure chrony is configured (Scored)
+Ensure X Window System is not installed (Scored)
+Ensure Avahi Server is not enabled (Scored)
+Ensure CUPS is not enabled (Scored)
+Ensure DHCP Server is not enabled (Scored)
+Ensure LDAP server is not enabled (Scored)
+Ensure NFS and RPC are not enabled (Scored)
+Ensure DNS Server is not enabled (Scored)
+Ensure FTP Server is not enabled (Scored)
+Ensure HTTP server is not enabled (Scored)
+Ensure IMAP and POP3 server is not enabled (Scored)
+Ensure Samba is not enabled (Scored)
+Ensure HTTP Proxy Server is not enabled (Scored)
+Ensure SNMP Server is not enabled (Scored)
+Ensure mail transfer agent is configured for local-only mode
+(Scored)
+Ensure rsync service is not enabled (Scored)
+Ensure NIS Server is not enabled (Scored)
+Service Clients
+Ensure NIS Client is not installed (Scored)
+Ensure rsh client is not installed (Scored)
+Ensure talk client is not installed (Scored)
+Ensure telnet client is not installed (Scored)
+Ensure LDAP client is not installed (Scored)
+Network Configuration
+Network Parameters (Host Only)
+Ensure IP forwarding is disabled (Scored)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+290 | P a g e
+
+

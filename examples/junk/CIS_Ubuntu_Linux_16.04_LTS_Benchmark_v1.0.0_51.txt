@@ -1,0 +1,10 @@
+References:
+1. AIDE stable manual: http://aide.sourceforge.net/stable/manual.html
+Notes:
+The prelinking feature can interfere with AIDE because it alters binaries to speed up their
+start up times. Run prelink -ua to restore the binaries to their prelinked state, thus
+avoiding false positives from AIDE.
+
+50 | P a g e
+
+

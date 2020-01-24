@@ -1,0 +1,14 @@
+Add or edit restrict lines in /etc/ntp.conf to match the following:
+restrict -4 default kod nomodify notrap nopeer noquery
+restrict -6 default kod nomodify notrap nopeer noquery
+
+Add or edit server lines to /etc/ntp.conf as appropriate:
+server <remote-server>
+
+Configure ntp to run as the ntp user by adding or editing the following file:
+/etc/init.d/ntp:
+RUNASUSER=ntp
+
+100 | P a g e
+
+

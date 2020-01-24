@@ -1,0 +1,22 @@
+2.2.10 Ensure HTTP server is not enabled (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+HTTP or web servers provide the ability to host web site content.
+Rationale:
+Unless there is a need to run the system as a web server, it is recommended that the
+package be deleted to reduce the potential attack surface.
+Audit:
+Run the following command to verify apache2 is not enabled:
+# systemctl is-enabled apache2
+disabled
+
+Verify result is not "enabled".
+Remediation:
+Run the following command to disable apache2:
+# systemctl disable apache2
+
+110 | P a g e
+
+

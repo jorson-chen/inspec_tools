@@ -1,0 +1,6 @@
+This recommendation is designed around the grub bootloader, if LILO or another
+bootloader is in use in your environment enact equivalent settings.
+
+54 | P a g e
+
+

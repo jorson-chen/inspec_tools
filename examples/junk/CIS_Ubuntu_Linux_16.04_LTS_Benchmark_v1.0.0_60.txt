@@ -1,0 +1,7 @@
+Ensure your system supports the XD or NX bit and has PAE support before implementing
+this recommendation as this may prevent it from booting if these are not supported by
+your hardware.
+
+59 | P a g e
+
+

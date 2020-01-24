@@ -1,0 +1,32 @@
+4.1.1 Configure Data Retention
+When auditing, it is important to carefully configure the storage requirements for audit
+logs. By default, auditd will max out the log files at 5MB and retain only 4 copies of them.
+Older versions will be deleted. It is possible on a system that the 20 MBs of audit logs may
+fill up the system causing loss of audit data. While the recommendations here provide
+guidance, check your site policy for audit storage requirements.
+
+4.1.1.1 Ensure audit log storage size is configured (Not Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Configure the maximum size of the audit log file. Once the log reaches the maximum size, it
+will be rotated and a new log file will be started.
+Rationale:
+It is important that an appropriate size is determined for log files so that they do not impact
+the system and audit data is not lost.
+Audit:
+Run the following command and ensure output is in compliance with site policy:
+# grep max_log_file /etc/audit/auditd.conf
+max_log_file = <MB>
+
+Remediation:
+Set the following parameter in /etc/audit/auditd.conf in accordance with site policy:
+max_log_file = <MB>
+
+Notes:
+The max_log_file parameter is measured in megabytes.
+
+159 | P a g e
+
+

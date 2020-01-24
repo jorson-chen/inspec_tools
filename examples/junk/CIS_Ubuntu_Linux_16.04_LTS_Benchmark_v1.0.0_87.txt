@@ -1,0 +1,33 @@
+1.8 Ensure updates, patches, and additional security software are
+installed (Not Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+Periodically patches are released for included software either due to security flaws or to
+include additional functionality.
+Rationale:
+Newer patches may contain security enhancements that would not be available through the
+latest full update. As a result, it is recommended that the latest software patches be used to
+take advantage of the latest functionality. As with any software installation, organizations
+need to determine if a given update meets their requirements and verify the compatibility
+and supportability of any additional software against the update revision that is selected.
+Audit:
+Run the following command and verify there are no updates or patches to install:
+# apt-get -s upgrade
+
+Remediation:
+Use your package manager to update all packages on the system according to site policy.
+Notes:
+Site policy may mandate a testing period before install onto production systems for
+available updates.
+
+2 Services
+While applying system updates and patches helps correct known vulnerabilities, one of the
+best ways to protect the system against as yet unreported vulnerabilities is to disable all
+services that are not required for normal system operation. This prevents the exploitation
+of vulnerabilities discovered at a later date. If a service is not enabled, it cannot be
+exploited. The actions in this section of the document provide guidance on some services
+86 | P a g e
+
+

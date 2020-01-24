@@ -1,0 +1,13 @@
+The recommendations in this section implement an audit policy that produces large
+quantities of logged data. In some environments it can be challenging to store or process
+these logs and as such they are marked as Level 2 for both Servers and Workstations.
+Note: For 64 bit systems that have arch as a rule parameter, you will need two rules: one
+for 64 bit and one for 32 bit systems. For 32 bit systems, only one rule is needed.
+
+Note: Once all configuration changes have been made to /etc/audit/audit.rules, the
+auditd configuration must be reloaded:
+# service auditd reload
+
+158 | P a g e
+
+

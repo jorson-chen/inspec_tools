@@ -1,0 +1,9 @@
+References:
+1. AJ Lewis, "LVM HOWTO", http://tldp.org/HOWTO/LVM-HOWTO/
+Notes:
+systemd includes the tmp.mount service which should be used instead of
+configuring /etc/fstab.
+
+26 | P a g e
+
+

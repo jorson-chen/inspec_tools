@@ -1,0 +1,24 @@
+than those listed here which may satisfy the intent of these recommendations without
+strictly matching the examples provided. Note: UFW may interfere with sysctl settings.
+
+3.6.1 Ensure iptables is installed (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+iptables allows configuration of the IPv4 tables in the linux kernel and the rules stored
+
+within them. Most firewall configuration utilities operate as a front end to iptables.
+Rationale:
+iptables is required for firewall management and configuration.
+Audit:
+Run the following command and verify iptables is installed:
+# dpkg -s iptables
+
+Remediation:
+Run the following command to install iptables:
+# apt-get install iptables
+
+149 | P a g e
+
+

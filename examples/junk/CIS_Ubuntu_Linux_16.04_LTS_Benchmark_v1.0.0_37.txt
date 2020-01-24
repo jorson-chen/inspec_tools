@@ -1,0 +1,31 @@
+1.1.12 Ensure separate partition exists for /home (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+The /home directory is used to support disk storage needs of local users.
+Rationale:
+If the system is intended to support local users, create a separate partition for the /home
+directory to protect against resource exhaustion and restrict the type of files that can be
+stored under /home.
+Audit:
+Run the following command and verify output shows /home is mounted:
+# mount | grep /home
+/dev/xvdf1 on /home type ext4 (rw,nodev,relatime,data=ordered)
+
+Remediation:
+For new installations, during installation create a custom partition setup and specify a
+separate partition for /home.
+For systems that were previously installed, create a new partition and
+configure /etc/fstab as appropriate.
+Impact:
+Resizing filesystems is a common activity in cloud-hosted servers. Separate filesystem
+partitions may prevent successful resizing, or may require the installation of additional
+tools solely for the purpose of resizing operations. The use of these additional tools may
+introduce their own security considerations.
+References:
+1. AJ Lewis, "LVM HOWTO", http://tldp.org/HOWTO/LVM-HOWTO/
+
+36 | P a g e
+
+

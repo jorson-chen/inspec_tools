@@ -1,0 +1,35 @@
+4.1.9 Ensure session initiation information is collected (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Monitor session initiation events. The parameters in this section track changes to the files
+associated with session events. The file /var/run/utmp file tracks all currently logged in
+users. The /var/log/wtmp file tracks logins, logouts, shutdown, and reboot events. All
+audit records will be tagged with the identifier "session." The file /var/log/btmp keeps
+track of failed login attempts and can be read by entering the command /usr/bin/last -f
+/var/log/btmp. All audit records will be tagged with the identifier "logins."
+Rationale:
+Monitoring these files for changes could alert a system administrator to logins occurring at
+unusual hours, which could indicate intruder activity (i.e. a user logging in at a time when
+they do not normally log in).
+Audit:
+Run the following command and verify output matches:
+# grep session /etc/audit/audit.rules
+-w /var/run/utmp -p wa -k session
+-w /var/log/wtmp -p wa -k session
+-w /var/log/btmp -p wa -k session
+
+Remediation:
+Add the following lines to the /etc/audit/audit.rules file:
+-w /var/run/utmp -p wa -k session
+-w /var/log/wtmp -p wa -k session
+-w /var/log/btmp -p wa -k session
+
+Notes:
+The last command can be used to read /var/log/wtmp (last with no parameters)
+and /var/run/utmp (last -f /var/run/utmp)
+
+171 | P a g e
+
+

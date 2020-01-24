@@ -1,0 +1,22 @@
+4.1.2 Ensure auditd service is enabled (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Turn on the auditd daemon to record system events.
+Rationale:
+The capturing of system events provides system administrators with information to allow
+them to determine if unauthorized access to their system is occurring.
+Audit:
+Run the following command to verify auditd is enabled:
+# systemctl is-enabled auditd
+enabled
+
+Verify result is "enabled".
+Remediation:
+Run the following command to enable auditd:
+# systemctl enable auditd
+
+162 | P a g e
+
+

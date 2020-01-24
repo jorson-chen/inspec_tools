@@ -1,0 +1,30 @@
+4.1.18 Ensure the audit configuration is immutable (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Set system audit so that audit rules cannot be modified with auditctl. Setting the flag "-e
+2" forces audit to be put in immutable mode. Audit changes can only be made on system
+reboot.
+Rationale:
+In immutable mode, unauthorized users cannot execute changes to the audit system to
+potentially hide malicious activity and then put the audit rules back. Users would most
+likely notice a system reboot and that could alert administrators of an attempt to make
+unauthorized audit changes.
+Audit:
+Run the following command and verify output matches:
+# grep "^\s*[^#]" /etc/audit/audit.rules | tail -1
+-e 2
+
+Remediation:
+Add the following line to the end of the/etc/audit/audit.rules file.
+-e 2
+
+4.2 Configure Logging
+Logging services should be configured to prevent information leaks and to aggregate logs
+on a remote server so that they can be reviewed in the event of a system compromise and
+ease log analysis.
+
+186 | P a g e
+
+

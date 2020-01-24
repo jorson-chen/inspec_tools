@@ -1,0 +1,9 @@
+Run the following command to restart rsyslogd:
+# pkill -HUP rsyslogd
+
+References:
+1. See the rsyslog(8) man page for more information.
+
+193 | P a g e
+
+

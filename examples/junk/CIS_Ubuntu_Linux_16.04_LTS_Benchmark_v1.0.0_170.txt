@@ -1,0 +1,34 @@
+4.1.7 Ensure events that modify the system's Mandatory Access
+Controls are collected (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Monitor SELinux/AppArmor mandatory access controls. The parameters below monitor
+any write access (potential additional, deletion or modification of files in the directory) or
+attribute changes to the /etc/selinux or /etc/apparmor and /etc/apparmor.d directories.
+Rationale:
+Changes to files in these directories could indicate that an unauthorized user is attempting
+to modify access controls and change security contexts, leading to a compromise of the
+system.
+Audit:
+On systems using SELinux run the following command and verify output matches:
+# grep MAC-policy /etc/audit/audit.rules
+-w /etc/selinux/ -p wa -k MAC-policy
+
+On systems using AppArmor run the following command and verify output matches:
+# grep MAC-policy /etc/audit/audit.rules
+-w /etc/apparmor/ -p wa -k MAC-policy
+-w /etc/apparmor.d/ -p wa -k MAC-policy
+
+Remediation:
+On systems using SELinux add the following line to the /etc/audit/audit.rules file:
+-w /etc/selinux/ -p wa -k MAC-policy
+
+On systems using AppArmor add the following line to the /etc/audit/audit.rules file:
+-w /etc/apparmor/ -p wa -k MAC-policy
+-w /etc/apparmor.d/ -p wa -k MAC-policy
+
+169 | P a g e
+
+

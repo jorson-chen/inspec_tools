@@ -1,0 +1,70 @@
+4.2.2.2 Ensure logging is configured (Not Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The /etc/syslog-ng/syslog-ng.conf file specifies rules for logging and which files are to
+be used to log certain classes of messages.
+Rationale:
+A great deal of important security-related information is sent via syslog-ng (e.g.,
+successful and failed su attempts, failed login attempts, root login attempts, etc.).
+Audit:
+Review the contents of the /etc/syslog-ng/syslog-ng.conf file to ensure appropriate
+logging is set. In addition, run the following command and ensure that the log files are
+logging information:
+# ls -l /var/log/
+
+Remediation:
+Edit the log lines in the /etc/syslog-ng/syslog-ng.conf file as appropriate for your
+environment:
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+log { source(src);
+};
+log { source(src);
+flags(final); };
+log { source(src);
+flags(final); };
+log { source(src);
+flags(final); };
+log { source(src);
+log { source(src);
+
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+source(chroots);
+
+filter(f_console); destination(console); };
+filter(f_console); destination(xconsole); };
+filter(f_newscrit); destination(newscrit); };
+filter(f_newserr); destination(newserr); };
+filter(f_newsnotice); destination(newsnotice); };
+filter(f_mailinfo); destination(mailinfo); };
+filter(f_mailwarn); destination(mailwarn); };
+filter(f_mailerr); destination(mailerr); };
+filter(f_mail); destination(mail); };
+filter(f_acpid); destination(acpid); flags(final);
+
+source(chroots); filter(f_acpid_full); destination(devnull);
+source(chroots); filter(f_acpid_old); destination(acpid);
+source(chroots); filter(f_netmgm); destination(netmgm);
+source(chroots); filter(f_local); destination(localmessages); };
+source(chroots); filter(f_messages); destination(messages); };
+
+195 | P a g e
+
+

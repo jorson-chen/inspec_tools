@@ -1,0 +1,12 @@
+log { source(src); source(chroots); filter(f_iptables); destination(firewall); };
+log { source(src); source(chroots); filter(f_warn); destination(warn); };
+
+Run the following command to restart syslog-ng:
+# pkill -HUP syslog-ng
+
+References:
+1. See the syslog-ng man page for more information.
+
+196 | P a g e
+
+

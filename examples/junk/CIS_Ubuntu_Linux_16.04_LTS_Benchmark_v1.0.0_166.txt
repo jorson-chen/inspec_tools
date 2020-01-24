@@ -1,0 +1,32 @@
+-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change
+-a always,exit -F arch=b32 -S clock_settime -k time-change
+-w /etc/localtime -p wa -k time-change
+
+For 64 bit systems add the following lines to the /etc/audit/audit.rules file:
+-a
+-a
+-a
+-a
+-w
+
+always,exit -F
+always,exit -F
+always,exit -F
+always,exit -F
+/etc/localtime
+
+arch=b64
+arch=b32
+arch=b64
+arch=b32
+-p wa -k
+
+-S adjtimex -S settimeofday -k time-change
+-S adjtimex -S settimeofday -S stime -k time-change
+-S clock_settime -k time-change
+-S clock_settime -k time-change
+time-change
+
+165 | P a g e
+
+

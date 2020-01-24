@@ -1,0 +1,25 @@
+6.2.20 Ensure shadow group is empty (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+The shadow group allows system programs which require access the ability to read the
+/etc/shadow file. No users should be assigned to the shadow group.
+Rationale:
+Any users assigned to the shadow group would be granted read access to the /etc/shadow
+file. If attackers can gain read access to the /etc/shadow file, they can easily run a
+password cracking program against the hashed passwords to break them. Other security
+information that is stored in the /etc/shadow file (such as expiration) could also be useful
+to subvert additional user accounts.
+Audit:
+Run the following commands and verify no results are returned:
+# grep ^shadow:[^:]*:[^:]*:[^:]+ /etc/group
+# awk -F: '($4 == "<shadow-gid>") { print }' /etc/passwd
+
+Remediation:
+Remove all users from the shadow group, and change the primary group of any users with
+shadow as their primary group.
+
+287 | P a g e
+
+

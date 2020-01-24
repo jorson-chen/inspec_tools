@@ -1,0 +1,12 @@
+PASS_MAX_DAYS 90
+
+Modify user parameters for all users with a password set to match:
+# chage --maxdays 90 <user>
+
+Notes:
+You can also check this setting in /etc/shadow directly. The 5th field should be 90 or less
+for all users with a password.
+
+239 | P a g e
+
+

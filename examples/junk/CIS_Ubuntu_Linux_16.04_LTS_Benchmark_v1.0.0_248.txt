@@ -1,0 +1,12 @@
+The audit and remediation in this recommendation apply to bash and shell. If other shells
+are supported on the system, it is recommended that their configuration files also are
+checked.
+Other methods of setting a default user umask exist however the shell configuration files
+are the last run and will override other settings if they exist therefore our recommendation
+is to configure in the shell configuration files. If other methods are in use in your
+environment they should be audited and the shell configs should be verified to not
+override.
+
+247 | P a g e
+
+

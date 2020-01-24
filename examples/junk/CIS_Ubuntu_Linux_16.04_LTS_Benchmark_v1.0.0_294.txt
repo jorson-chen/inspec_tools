@@ -1,0 +1,169 @@
+4.2.4
+4.3
+5
+5.1
+5.1.1
+5.1.2
+5.1.3
+5.1.4
+5.1.5
+5.1.6
+5.1.7
+5.1.8
+5.2
+5.2.1
+5.2.2
+5.2.3
+5.2.4
+5.2.5
+5.2.6
+5.2.7
+5.2.8
+5.2.9
+5.2.10
+5.2.11
+5.2.12
+5.2.13
+5.2.14
+5.2.15
+5.3
+5.3.1
+5.3.2
+5.3.3
+5.3.4
+5.4
+5.4.1
+
+Ensure permissions on all logfiles are configured (Scored)
+Ensure logrotate is configured (Not Scored)
+Access, Authentication and Authorization
+Configure cron
+Ensure cron daemon is enabled (Scored)
+Ensure permissions on /etc/crontab are configured (Scored)
+Ensure permissions on /etc/cron.hourly are configured
+(Scored)
+Ensure permissions on /etc/cron.daily are configured
+(Scored)
+Ensure permissions on /etc/cron.weekly are configured
+(Scored)
+Ensure permissions on /etc/cron.monthly are configured
+(Scored)
+Ensure permissions on /etc/cron.d are configured (Scored)
+Ensure at/cron is restricted to authorized users (Scored)
+SSH Server Configuration
+Ensure permissions on /etc/ssh/sshd_config are configured
+(Scored)
+Ensure SSH Protocol is set to 2 (Scored)
+Ensure SSH LogLevel is set to INFO (Scored)
+Ensure SSH X11 forwarding is disabled (Scored)
+Ensure SSH MaxAuthTries is set to 4 or less (Scored)
+Ensure SSH IgnoreRhosts is enabled (Scored)
+Ensure SSH HostbasedAuthentication is disabled (Scored)
+Ensure SSH root login is disabled (Scored)
+Ensure SSH PermitEmptyPasswords is disabled (Scored)
+Ensure SSH PermitUserEnvironment is disabled (Scored)
+Ensure only approved MAC algorithms are used (Scored)
+Ensure SSH Idle Timeout Interval is configured (Scored)
+Ensure SSH LoginGraceTime is set to one minute or less
+(Scored)
+Ensure SSH access is limited (Scored)
+Ensure SSH warning banner is configured (Scored)
+Configure PAM
+Ensure password creation requirements are configured
+(Scored)
+Ensure lockout for failed password attempts is configured
+(Not Scored)
+Ensure password reuse is limited (Scored)
+Ensure password hashing algorithm is SHA-512 (Scored)
+User Accounts and Environment
+Set Shadow Password Suite Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+293 | P a g e
+
+

@@ -1,0 +1,9 @@
+Remediation:
+Edit the /etc/issue.net file with the appropriate contents according to your site policy,
+remove any instances of \m, \r, \s, or \v:
+# echo "Authorized uses only. All activity may be monitored and reported." >
+/etc/issue.net
+
+80 | P a g e
+
+

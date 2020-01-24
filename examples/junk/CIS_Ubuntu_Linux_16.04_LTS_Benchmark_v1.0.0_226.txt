@@ -1,0 +1,6 @@
+Some organizations may have stricter requirements for approved ciphers. Ensure that
+MACs used are in compliance with site policy.
+
+225 | P a g e
+
+

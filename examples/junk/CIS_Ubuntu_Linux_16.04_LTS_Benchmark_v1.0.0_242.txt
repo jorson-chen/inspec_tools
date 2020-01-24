@@ -1,0 +1,6 @@
+You can also check this setting in /etc/shadow directly. The 5th field should be 7 or more
+for all users with a password.
+
+241 | P a g e
+
+

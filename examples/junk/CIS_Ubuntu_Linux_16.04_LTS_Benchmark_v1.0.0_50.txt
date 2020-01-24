@@ -1,0 +1,34 @@
+1.3 Filesystem Integrity Checking
+AIDE is a file integrity checking tool, similar in nature to Tripwire. While it cannot prevent
+intrusions, it can detect unauthorized changes to configuration files by alerting when the
+files are changed. When setting up AIDE, decide internally what the site policy will be
+concerning integrity checking. Review the AIDE quick start guide and AIDE documentation
+before proceeding.
+
+1.3.1 Ensure AIDE is installed (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+AIDE takes a snapshot of filesystem state including modification times, permissions, and
+file hashes which can then be used to compare against the current state of the filesystem to
+detect modifications to the system.
+Rationale:
+By monitoring the filesystem state compromised files can be detected to prevent or limit
+the exposure of accidental or malicious misconfigurations or modified binaries.
+Audit:
+Run the following command and verify AIDE is installed:
+# dpkg -s aide
+
+Remediation:
+Run the following command to install AIDE:
+# apt-get install aide
+
+Configure AIDE as appropriate for your environment. Consult the AIDE documentation for
+options.
+Initialize AIDE:
+# aide --init
+
+49 | P a g e
+
+

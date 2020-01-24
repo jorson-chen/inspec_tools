@@ -1,0 +1,6 @@
+Remediation will only affect the active system firewall, be sure to configure the default
+policy in your firewall management to apply on boot as well.
+
+152 | P a g e
+
+

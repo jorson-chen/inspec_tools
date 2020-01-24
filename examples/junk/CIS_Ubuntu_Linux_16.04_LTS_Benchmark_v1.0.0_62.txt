@@ -1,0 +1,34 @@
+1.5.4 Ensure prelink is disabled (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+is a program that modifies ELF shared libraries and ELF dynamically linked
+binaries in such a way that the time needed for the dynamic linker to perform relocations
+at startup significantly decreases.
+prelink
+
+Rationale:
+The prelinking feature can interfere with the operation of AIDE, because it changes
+binaries. Prelinking can also increase the vulnerability of the system if a malicious user is
+able to compromise a common library such as libc.
+Audit:
+Run the following command and verify prelink is not installed:
+# dpkg -s prelink
+
+Remediation:
+Run the following command to restore binaries to normal:
+# prelink -ua
+
+Run the following command to uninstall prelink:
+# apt-get remove prelink
+
+1.6 Mandatory Access Control
+Mandatory Access Control (MAC) provides an additional layer of access restrictions to
+processes on top of the base Discretionary Access Controls. By restricting how processes
+can access files and resources on a system the potential impact from vulnerabilities in the
+processes can be reduced.
+
+61 | P a g e
+
+

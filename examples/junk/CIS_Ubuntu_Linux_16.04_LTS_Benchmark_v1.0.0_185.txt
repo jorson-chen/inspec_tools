@@ -1,0 +1,37 @@
+4.1.17 Ensure kernel module loading and unloading is collected (Scored)
+Profile Applicability:
+ Level 2 - Server
+ Level 2 - Workstation
+Description:
+Monitor the loading and unloading of kernel modules. The programs insmod (install a
+kernel module), rmmod (remove a kernel module), and modprobe (a more sophisticated
+program to load and unload modules, as well as some other features) control loading and
+unloading of modules. The init_module (load a module) and delete_module (delete a
+module) system calls control loading and unloading of modules. Any execution of the
+loading and unloading module programs and system calls will trigger an audit record with
+an identifier of "modules".
+Rationale:
+Monitoring the use of insmod, rmmod and modprobe could provide system administrators
+with evidence that an unauthorized user loaded or unloaded a kernel module, possibly
+compromising the security of the system. Monitoring of the init_module and
+delete_module system calls would reflect an unauthorized user attempting to use a
+different program to load and unload modules.
+Audit:
+On a 32 bit system run the following command and verify the output matches:
+# grep modules /etc/audit/audit.rules
+-w /sbin/insmod -p x -k modules
+-w /sbin/rmmod -p x -k modules
+-w /sbin/modprobe -p x -k modules
+-a always,exit arch=b32 -S init_module -S delete_module -k modules
+
+On a 64 bit system run the following command and verify the output matches:
+# grep modules /etc/audit/audit.rules
+-w /sbin/insmod -p x -k modules
+-w /sbin/rmmod -p x -k modules
+-w /sbin/modprobe -p x -k modules
+-a always,exit arch=b64 -S init_module -S delete_module -k modules
+
+Remediation:
+184 | P a g e
+
+

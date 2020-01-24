@@ -1,0 +1,48 @@
+1.6.1 Configure SELinux
+SELinux provides a Mandatory Access Control (MAC) system that greatly augments the
+default Discretionary Access Control (DAC) model. Under SELinux, every process and every
+object (files, sockets, pipes) on the system is assigned a security context, a label that
+includes detailed type information about the object. The kernel allows processes to access
+objects only if that access is explicitly allowed by the policy in effect. The policy defines
+transitions, so that a user can be allowed to run software, but the software can run under a
+different context than the user's default. This automatically limits the damage that the
+software can do to files accessible by the calling user. The user does not need to take any
+action to gain this benefit. For an action to occur, both the traditional DAC permissions
+must be satisfied as well as the SELinux MAC rules. The action will not be allowed if either
+one of these models does not permit the action. In this way, SELinux rules can only make a
+system's permissions more restrictive and secure. SELinux requires a complex policy to
+allow all the actions required of a system under normal operation. Three such policies have
+been available for use with Ubuntu and are included with the system: ubuntu, default,
+strict, and mls. These are described as follows:
+
+
+
+
+
+
+ubuntu: targeted rules developed for ubuntu specifically
+default: targeted rules developed and maintained by Debian.
+
+Consists mostly of
+Type Enforcement (TE) rules, and a small number of Role-Based Access Control
+(RBAC) rules. Targeted restricts the actions of many types of programs, but leaves
+interactive users largely unaffected.
+strict: also uses TE and RBAC rules, but on more programs and more aggressively.
+mls: implements Multi-Level Security (MLS), which introduces even more kinds of
+labels (sensitivity and category) and rules that govern access based on these.
+
+This section provides guidance for the configuration of the targeted policy.
+Note: This section only applies if SELinux is in use on the system. Recommendations for
+AppArmor are also included, and additional Mandatory Access Control systems exist
+beyond these two. AppArmor is the standard MAC system for Ubuntu systems.
+References:
+1. NSA SELinux resources:
+1. http://www.nsa.gov/research/selinux
+2. http://www.nsa.gov/research/selinux/list.shtml
+2. Fedora SELinux resources:
+1. FAQ: http://docs.fedoraproject.org/selinux-faq
+2. User Guide: http://docs.fedoraproject.org/selinux-user-guide
+
+63 | P a g e
+
+

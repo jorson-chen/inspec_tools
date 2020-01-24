@@ -1,0 +1,32 @@
+6.2.14 Ensure no users have .rhosts files (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+While no .rhosts files are shipped by default, users can easily create them.
+Rationale:
+This action is only meaningful if .rhosts support is permitted in the file /etc/pam.conf.
+Even though the .rhosts files are ineffective if support is disabled in /etc/pam.conf, they
+may have been brought over from other systems and could contain information useful to
+an attacker for those other systems.
+Audit:
+Run the following script and verify no results are returned:
+#!/bin/bash
+for dir in `cat /etc/passwd | egrep -v '(root|halt|sync|shutdown)' | awk -F: '($7 !=
+"/usr/sbin/nologin") { print $6 }'`; do
+for file in $dir/.rhosts; do
+if [ ! -h "$file" -a -f "$file" ]; then
+echo ".rhosts file in $dir"
+fi
+done
+done
+
+Remediation:
+Making global modifications to users' files without alerting the user community can result
+in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
+policy be established to report user .rhosts files and determine the action to be taken in
+accordance with site policy.
+
+281 | P a g e
+
+

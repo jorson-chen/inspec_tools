@@ -1,0 +1,48 @@
+benchmark. If you are interested in participating in the consensus process, please visit
+https://community.cisecurity.org.
+
+Typographical Conventions
+The following typographical conventions are used throughout this guide:
+Convention
+
+Meaning
+
+Stylized Monospace font
+
+Used for blocks of code, command, and script examples.
+Text should be interpreted exactly as presented.
+
+Monospace font
+
+Used for inline code, commands, or examples. Text should
+be interpreted exactly as presented.
+
+<italic font in brackets>
+
+Italic texts set in angle brackets denote a variable
+requiring substitution for a real value.
+
+Italic font
+
+Used to denote the title of a book, article, or other
+publication.
+
+Note
+
+Additional information or caveats
+
+Scoring Information
+A scoring status indicates whether compliance with the given recommendation impacts the
+assessed target's benchmark score. The following scoring statuses are used in this
+benchmark:
+Scored
+Failure to comply with "Scored" recommendations will decrease the final benchmark score.
+Compliance with "Scored" recommendations will increase the final benchmark score.
+Not Scored
+Failure to comply with "Not Scored" recommendations will not decrease the final
+benchmark score. Compliance with "Not Scored" recommendations will not increase the
+final benchmark score.
+
+12 | P a g e
+
+

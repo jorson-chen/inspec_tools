@@ -1,0 +1,38 @@
+Strong passwords protect systems from being hacked through brute force methods.
+Audit:
+Run the following commands and verify all password requirements are as listed or stricter:
+# grep pam_pwquality.so /etc/pam.d/common-password
+password requisite pam_pwquality.so try_first_pass retry=3
+# grep ^minlen /etc/security/pwquality.conf
+minlen=14
+# grep ^dcredit /etc/security/pwquality.conf
+dcredit=-1
+# grep ^lcredit /etc/security/pwquality.conf
+lcredit=-1
+# grep ^ocredit /etc/security/pwquality.conf
+ocredit=-1
+# grep ^ucredit /etc/security/pwquality.conf
+ucredit=-1
+
+Remediation:
+Run the following command to install the pam_pwquality module:
+apt-get install libpam-pwquality
+
+Edit the /etc/pam.d/common-passwd file to include the appropriate options
+for pam_pwquality.so and to conform to site policy:
+password requisite pam_pwquality.so try_first_pass retry=3
+
+Edit /etc/security/pwquality.conf to add or update the following settings to conform to
+site policy:
+minlen=14
+dcredit=-1
+ucredit=-1
+ocredit=-1
+lcredit=-1
+
+Notes:
+Additional module options may be set, recommendation only covers those listed here.
+
+233 | P a g e
+
+

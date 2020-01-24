@@ -1,0 +1,22 @@
+This profile is intended for workstations.
+
+Acknowledgements
+This benchmark exemplifies the great things a community of users, vendors, and subject matter
+experts can accomplish through consensus collaboration. The CIS community thanks the entire
+consensus team with special recognition to the following individuals who contributed greatly to
+the creation of this guide:
+Contributor
+Jonathan Lewis Christopherson
+Joy Latten
+Marcelo Cerri
+Vineetha Hari Pai
+Editor
+Rael Daruszka , Center for Internet Security
+This benchmark is based upon previous Linux benchmarks published and would not be
+possible without the contributions provided over the history of all of these
+benchmarks. The CIS community thanks everyone who has contributed to the Linux
+benchmarks.
+
+14 | P a g e
+
+

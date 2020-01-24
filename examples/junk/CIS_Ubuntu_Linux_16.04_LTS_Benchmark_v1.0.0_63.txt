@@ -1,0 +1,9 @@
+Impact: Mandatory Access Control limits the capabilities of applications and daemons on a
+system, while this can prevent unauthorized access the configuration of MAC can be
+complex and difficult to implement correctly preventing legitimate access from occurring.
+
+Note: Apparmor is the default MAC provided with Ubuntu systems.
+
+62 | P a g e
+
+

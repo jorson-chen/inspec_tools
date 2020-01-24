@@ -1,0 +1,35 @@
+This document provides prescriptive guidance for establishing a secure configuration
+posture for Ubuntu Linux 16.04 LTS systems running on x86 and x64 platforms.
+Many lists are included including filesystem types, services, clients, and network
+protocols. Not all items in these lists are guaranteed to exist on all distributions and
+additional similar items may exist which should be considered in addition to those
+explicitly mentioned.
+The guidance within broadly assumes that operations are being performed as the root
+user. Non-root users may not be able to access certain areas of the system, especially after
+remediation has been performed. It is advisable to verify root users path integrity and the
+integrity of any programs being run prior to execution of commands and scripts included in
+this benchmark.
+To obtain the latest version of this guide, please visit http://benchmarks.cisecurity.org. If
+you have questions, comments, or have identified ways to improve this guide, please write
+us at feedback@cisecurity.org.
+
+Intended Audience
+This benchmark is intended for system and application administrators, security specialists,
+auditors, help desk, and platform deployment personnel who plan to develop, deploy,
+assess, or secure solutions that incorporate Linux on a x86 platform.
+
+Consensus Guidance
+This benchmark was created using a consensus review process comprised of subject
+matter experts. Consensus participants provide perspective from a diverse set of
+backgrounds including consulting, software development, audit and compliance, security
+research, operations, government, and legal.
+Each CIS benchmark undergoes two phases of consensus review. The first phase occurs
+during initial benchmark development. During this phase, subject matter experts convene
+to discuss, create, and test working drafts of the benchmark. This discussion occurs until
+consensus has been reached on benchmark recommendations. The second phase begins
+after the benchmark has been published. During this phase, all feedback provided by the
+Internet community is reviewed by the consensus team for incorporation in the
+
+11 | P a g e
+
+

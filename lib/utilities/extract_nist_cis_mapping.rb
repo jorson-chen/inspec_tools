@@ -6,7 +6,6 @@ module Util
       @file = file
       @full_excel = []
       @headers = {}
-
       open_excel
       set_working_sheet
       map_headers

@@ -1,0 +1,42 @@
+6.2.13
+6.2.14
+6.2.15
+6.2.16
+6.2.17
+6.2.18
+6.2.19
+6.2.20
+
+Ensure users' .netrc Files are not group or world accessible
+(Scored)
+Ensure no users have .rhosts files (Scored)
+Ensure all groups in /etc/passwd exist in /etc/group (Scored)
+Ensure no duplicate UIDs exist (Scored)
+Ensure no duplicate GIDs exist (Scored)
+Ensure no duplicate user names exist (Scored)
+Ensure no duplicate group names exist (Scored)
+Ensure shadow group is empty (Scored)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+295 | P a g e
+
+

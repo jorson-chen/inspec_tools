@@ -1,0 +1,65 @@
+3.6.5 Ensure firewall rules exist for all open ports (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+Any ports that have been opened on non-loopback addresses need firewall rules to govern
+traffic.
+Rationale:
+Without a firewall rule configured for open ports default firewall policy will drop all
+packets to these ports.
+Audit:
+Run the following command to determine open ports:
+
+# netstat -ln
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address
+tcp
+0
+0 0.0.0.0:22
+
+Foreign Address
+0.0.0.0:*
+
+State
+LISTEN
+
+Run the following command to determine firewall rules:
+
+# iptables -L INPUT -v -n
+Chain INPUT (policy DROP 0 packets, 0 bytes)
+pkts bytes target
+prot opt in
+out
+0
+0 ACCEPT
+all -- lo
+*
+0
+0 DROP
+all -- *
+*
+0
+0 ACCEPT
+tcp -- *
+*
+tcp dpt:22 state NEW
+
+source
+0.0.0.0/0
+127.0.0.0/8
+0.0.0.0/0
+
+destination
+0.0.0.0/0
+0.0.0.0/0
+0.0.0.0/0
+
+Verify all open ports listening on non-localhost addresses have at least one firewall rule.
+The last line identified by the "tcp dpt:22 state NEW" identifies it as a firewall rule for new
+connections on tcp port 22.
+Remediation:
+
+154 | P a g e
+
+

@@ -1,0 +1,9 @@
+Run the following command to set all profiles to enforce mode:
+# aa-enforce /etc/apparmor.d/*
+
+Any unconfined processes may need to have a profile created or activated for them and
+then be restarted.
+
+72 | P a g e
+
+

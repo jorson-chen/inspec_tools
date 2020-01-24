@@ -1,0 +1,169 @@
+1.2.2
+1.3
+1.3.1
+1.3.2
+1.4
+1.4.1
+1.4.2
+1.4.3
+1.5
+1.5.1
+1.5.2
+1.5.3
+1.5.4
+1.6
+1.6.1
+1.6.1.1
+1.6.1.2
+1.6.1.3
+1.6.1.4
+1.6.2
+1.6.2.1
+1.6.2.2
+1.6.3
+1.7
+1.7.1
+1.7.1.1
+1.7.1.2
+1.7.1.3
+1.7.1.4
+1.7.1.5
+1.7.1.6
+1.7.2
+1.8
+
+Scored)
+Ensure GPG keys are configured (Not Scored)
+Filesystem Integrity Checking
+Ensure AIDE is installed (Scored)
+Ensure filesystem integrity is regularly checked (Scored)
+Secure Boot Settings
+Ensure permissions on bootloader config are configured
+(Scored)
+Ensure bootloader password is set (Scored)
+Ensure authentication required for single user mode (Scored)
+Additional Process Hardening
+Ensure core dumps are restricted (Scored)
+Ensure XD/NX support is enabled (Not Scored)
+Ensure address space layout randomization (ASLR) is enabled
+(Scored)
+Ensure prelink is disabled (Scored)
+Mandatory Access Control
+Configure SELinux
+Ensure SELinux is not disabled in bootloader configuration
+(Scored)
+Ensure the SELinux state is enforcing (Scored)
+Ensure SELinux policy is configured (Scored)
+Ensure no unconfined daemons exist (Scored)
+Configure AppArmor
+Ensure AppArmor is not disabled in bootloader configuration
+(Scored)
+Ensure all AppArmor Profiles are enforcing (Scored)
+Ensure SELinux or AppArmor are installed (Not Scored)
+Warning Banners
+Command Line Warning Banners
+Ensure message of the day is configured properly (Scored)
+Ensure local login warning banner is configured properly
+(Not Scored)
+Ensure remote login warning banner is configured properly
+(Not Scored)
+Ensure permissions on /etc/motd are configured (Not
+Scored)
+Ensure permissions on /etc/issue are configured (Scored)
+Ensure permissions on /etc/issue.net are configured (Not
+Scored)
+Ensure GDM login banner is configured (Scored)
+Ensure updates, patches, and additional security software are
+installed (Not Scored)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+289 | P a g e
+
+

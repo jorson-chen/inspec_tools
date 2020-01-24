@@ -1,0 +1,176 @@
+3.1.2
+3.2
+3.2.1
+3.2.2
+3.2.3
+3.2.4
+3.2.5
+3.2.6
+3.2.7
+3.2.8
+3.3
+3.3.1
+3.3.2
+3.3.3
+3.4
+3.4.1
+3.4.2
+3.4.3
+3.4.4
+3.4.5
+3.5
+3.5.1
+3.5.2
+3.5.3
+3.5.4
+3.6
+3.6.1
+3.6.2
+3.6.3
+3.6.4
+3.6.5
+3.7
+4
+4.1
+4.1.1
+4.1.1.1
+4.1.1.2
+4.1.1.3
+4.1.2
+4.1.3
+
+Ensure packet redirect sending is disabled (Scored)
+Network Parameters (Host and Router)
+Ensure source routed packets are not accepted (Scored)
+Ensure ICMP redirects are not accepted (Scored)
+Ensure secure ICMP redirects are not accepted (Scored)
+Ensure suspicious packets are logged (Scored)
+Ensure broadcast ICMP requests are ignored (Scored)
+Ensure bogus ICMP responses are ignored (Scored)
+Ensure Reverse Path Filtering is enabled (Scored)
+Ensure TCP SYN Cookies is enabled (Scored)
+IPv6
+Ensure IPv6 router advertisements are not accepted (Not
+Scored)
+Ensure IPv6 redirects are not accepted (Not Scored)
+Ensure IPv6 is disabled (Not Scored)
+TCP Wrappers
+Ensure TCP Wrappers is installed (Scored)
+Ensure /etc/hosts.allow is configured (Scored)
+Ensure /etc/hosts.deny is configured (Scored)
+Ensure permissions on /etc/hosts.allow are configured
+(Scored)
+Ensure permissions on /etc/hosts.deny are 644 (Scored)
+Uncommon Network Protocols
+Ensure DCCP is disabled (Not Scored)
+Ensure SCTP is disabled (Not Scored)
+Ensure RDS is disabled (Not Scored)
+Ensure TIPC is disabled (Not Scored)
+Firewall Configuration
+Ensure iptables is installed (Scored)
+Ensure default deny firewall policy (Scored)
+Ensure loopback traffic is configured (Scored)
+Ensure outbound and established connections are configured
+(Not Scored)
+Ensure firewall rules exist for all open ports (Scored)
+Ensure wireless interfaces are disabled (Not Scored)
+Logging and Auditing
+Configure System Accounting (auditd)
+Configure Data Retention
+Ensure audit log storage size is configured (Not Scored)
+Ensure system is disabled when audit logs are full (Scored)
+Ensure audit logs are not automatically deleted (Scored)
+Ensure auditd service is enabled (Scored)
+Ensure auditing for processes that start prior to auditd is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+291 | P a g e
+
+

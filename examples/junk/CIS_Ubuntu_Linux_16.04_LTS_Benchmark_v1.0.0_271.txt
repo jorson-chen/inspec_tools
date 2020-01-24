@@ -1,0 +1,21 @@
+6.2.5 Ensure root is the only UID 0 account (Scored)
+Profile Applicability:
+ Level 1 - Server
+ Level 1 - Workstation
+Description:
+Any account with UID 0 has superuser privileges on the system.
+Rationale:
+This access must be limited to only the default root account and only from the system
+console. Administrative access must be through an unprivileged account using an approved
+mechanism as noted in Item 5.6 Ensure access to the su command is restricted.
+Audit:
+Run the following command and verify that only "root" is returned:
+# cat /etc/passwd | awk -F: '($3 == 0) { print $1 }'
+root
+
+Remediation:
+Remove any users other than root with UID 0 or assign them a new UID if appropriate.
+
+270 | P a g e
+
+
